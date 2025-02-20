@@ -1,0 +1,11 @@
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/items.xsd">
+  <title>ITEMS_TITLE</title>
+  <item>
+    <title>TYPE1_TITLE</title>
+    <type attr="TYPE1_ATTR">TYPE1</type>
+  </item>
+  <item>
+    <title>TYPE2_TITLE</title>
+    <type>TYPE2</type>
+  </item>
+</items>

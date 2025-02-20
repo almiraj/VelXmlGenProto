@@ -1,0 +1,5 @@
+title : ${items.title}
+#foreach($itemTemplate in $itemTemplates)
+
+$itemTemplate
+#end

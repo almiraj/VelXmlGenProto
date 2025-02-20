@@ -1,0 +1,13 @@
+title : ITEMS_TITLE
+
+=== TYPE1 ===
+
+type1_title : TYPE1_TITLE
+type1_type : TYPE1
+type1_title_attr : TYPE1_ATTR
+
+=== TYPE2 ===
+
+type1_title : TYPE2_TITLE
+type1_type : TYPE2
+type1_title_attr : 

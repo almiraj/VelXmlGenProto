@@ -1,0 +1,5 @@
+=== TYPE2 ===
+
+type1_title : ${item.title}
+type1_type : ${item.type.value}
+type1_title_attr : ${item.type.attr}
