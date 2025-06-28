@@ -1,4 +1,4 @@
-package velXml.beans;
+package velXml.model;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlValue;

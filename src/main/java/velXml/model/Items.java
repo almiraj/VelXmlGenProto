@@ -1,4 +1,4 @@
-package velXml.beans;
+package velXml.model;
 
 import java.util.List;
 
