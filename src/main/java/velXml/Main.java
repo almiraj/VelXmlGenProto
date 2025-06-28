@@ -1,6 +1,7 @@
 package velXml;
 
 import java.io.File;
+import java.io.InputStreamReader;
 import java.io.StringWriter;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -12,6 +13,7 @@ import java.util.Properties;
 import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
@@ -28,11 +30,11 @@ public class Main {
 		JAXBContext context = JAXBContext.newInstance(Items.class);
 
 		SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-		// File Type
-		Schema schema = sf.newSchema(new File("xsd/items.xsd"));
+		// File Type (difficult to synchronize to Java models)
+//		Schema schema = sf.newSchema(new File("xsd/items.xsd"));
 		// Class Type
-//		Schema schema = sf.newSchema(new StreamSource(new InputStreamReader(
-//				ClassLoader.getSystemResourceAsStream("velXml/xsd/items.xsd"), "UTF-8")));
+		Schema schema = sf.newSchema(new StreamSource(new InputStreamReader(
+				ClassLoader.getSystemResourceAsStream("velXml/xsd/items.xsd"), "UTF-8")));
 
 		Unmarshaller unmarshaller = context.createUnmarshaller();
 		unmarshaller.setSchema(schema);
