@@ -1,7 +1,6 @@
 package velXml;
 
 import java.io.File;
-import java.io.InputStreamReader;
 import java.io.StringWriter;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -33,8 +32,8 @@ public class Main {
 		// File Type (difficult to synchronize to Java models)
 //		Schema schema = sf.newSchema(new File("xsd/items.xsd"));
 		// Class Type
-		Schema schema = sf.newSchema(new StreamSource(new InputStreamReader(
-				ClassLoader.getSystemResourceAsStream("velXml/xsd/items.xsd"), "UTF-8")));
+		Schema schema = sf.newSchema(new StreamSource(
+				ClassLoader.getSystemResourceAsStream("velXml/xsd/items.xsd")));
 
 		Unmarshaller unmarshaller = context.createUnmarshaller();
 		unmarshaller.setSchema(schema);
